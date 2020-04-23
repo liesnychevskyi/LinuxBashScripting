@@ -1,0 +1,47 @@
+pwd
+ls
+ls -al
+ls -l
+ls -lrt  = column files and folders
+mkdir =make new dir
+touch name file =create new file
+rmdir
+history =list all commands used
+man rmdir
+clear
+ps  =processes from user
+ps -ef =all the processes on machine
+top =CPU usage 20 processes on machine
+open . =root
+ll  -a
+vim =editor
+mv <filename> =move files to - or rename
+rm -rf <namefile or directory> =to remove file
+sudo apt-get update =apdate
+shutdown +0 =off machine
+sudo apt-get install (something toinstall)
+cat + path
+sudo gedit  /etc/sudoers  + in the end of the file (jenkins ALL=(ALL) NOPASSWORD: ALL )   =privileges permission
+which $SHELL = shell version
+/bin/bash —version  = version
+wget  <http-addres> - to download ApacheTomcat or some of soft
+tar -xvzf <filename> to unzip file
+
+
+ https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started  vim tutorial
+Jenkins tips
+=========
+sudo systemctl status jenkins  =check the status of Jenkins
+sudo systemctl start jenkins  =start Jenkins
+sudo systemctl restart jenkins  =restart Jenkins
+sudo systemctl stop jenkins  =stop Jenkins
+
+sudo gedit  + path to file =to edit the file
+
+
+rm -rfv movies   =remove full folder
+
+chmod 400 =filepermission
+
+
+
