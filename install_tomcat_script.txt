@@ -1,0 +1,5 @@
+#!/bin/bash  // witch  bash we are choosing
+wget https://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz // download zip
+tar -xvzf apache-tomcat-9.0.34.tar.gz // extract zip file
+rm apache-tomcat-9.0.34.tar.gz // remove zip
+mv apache-tomcat-9.0.34/ tomcat9 // rename file
