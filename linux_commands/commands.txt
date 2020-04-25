@@ -1,13 +1,28 @@
+----------------------------------------| show commands
 pwd
 ls
 ls -al
 ls -l
 ls -lrt  = column files and folders
+----------------------------------------| free RAM size
+free -m
+----------------------------------------| permissions
+chmod 755 <script name>
+./<script name>  =run permitted script
+----------------------------------------| which
+which pwd
+which cp
+----------------------------------------| echo
+echo $PATH
+----------------------------------------| export
+export PATH=${PATH}:<path>
+----------------------------------------| create
 mkdir =make new dir
 touch name file =create new file
+----------------------------------------| delete
 rmdir
 history =list all commands used
-man rmdir
+man rmdir =
 clear
 ps  =processes from user
 ps -ef =all the processes on machine
