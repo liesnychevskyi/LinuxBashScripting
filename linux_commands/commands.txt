@@ -9,11 +9,15 @@ free -m
 ----------------------------------------| permissions
 chmod 755 <script name>
 ./<script name>  =run permitted script
+chmod +x =execution permission
 ----------------------------------------| which
 which pwd
 which cp
 ----------------------------------------| echo
 echo $PATH
+echo "$(ls)"
+echo '$(ls)'
+echo $(ls)
 ----------------------------------------| export
 export PATH=${PATH}:<path>
 ----------------------------------------| create
