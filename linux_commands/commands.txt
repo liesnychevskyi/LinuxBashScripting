@@ -24,6 +24,17 @@ export PATH=${PATH}:<path>
 mkdir =make new dir
 touch name file =create new file
 ----------------------------------------| delete
+----------------------------------------| comment line
+# =single comment line
+<< multiplecomment
+1
+2
+3
+multiplecomment
+----------------------------------------|
+----------------------------------------|
+----------------------------------------|
+
 rmdir
 history =list all commands used
 man rmdir =
@@ -58,9 +69,9 @@ sudo systemctl stop jenkins  =stop Jenkins
 sudo gedit  + path to file =to edit the file
 
 
-rm -rfv movies   =remove full folder
+rm -rfv <file name>   =remove full folder
 
-chmod 400 =filepermission
+chmod 400 =file permission
 
 
 
