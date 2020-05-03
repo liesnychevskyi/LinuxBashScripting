@@ -54,13 +54,20 @@ chmod 400 <filename> =full permission
 chmod +x <filename>
 chmod -x <filename>
 chmod u+x <filename>
-
 ----------------------------------------| Variables type
 
 ----------------------------------------| System variables
 env =sys variables lis
 set =variables list
 set|grep USER =user variable
+----------------------------------------| AWK commands
+
+----------------------------------------| Sudo get update
+sudo apt-get update
+----------------------------------------| Read mode
+read -p "Enter server name: " web_server
+
+
 ----------------------------------------|
 rmdir
 history =list all commands used
