@@ -1,0 +1,5 @@
+#!/bin/bash
+
+date +"%Y-%m-%d" # American format
+date +"%d-%m-%Y" # Europe format
+todays_date=$(date +"%d-%m-%Y")

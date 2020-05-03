@@ -1,0 +1,15 @@
+#!/bin/bash
+#============================================================||
+x=3 # variable
+c=2
+my_name=Stan
+my_name="Stan Liesnychevskyi"
+#============================================================||
+echo "$x" # To see variable data
+echo $x   # Works to
+echo -e "The value of x is: $x \nThe value of c is: $c"
+echo "My name is: $my_name"
+
+\n = new line
+-e =
+

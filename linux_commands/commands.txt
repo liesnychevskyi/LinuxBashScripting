@@ -1,5 +1,7 @@
 ----------------------------------------| show commands
 pwd
+ll
+ll  -a
 ls
 ls -al
 ls -l
@@ -18,12 +20,18 @@ echo $PATH
 echo "$(ls)"
 echo '$(ls)'
 echo $(ls)
+echo $USER
+echo $SHELL
+echo $OSTYPE
+echo $? =status previous command status code
 ----------------------------------------| export
 export PATH=${PATH}:<path>
 ----------------------------------------| create
 mkdir =make new dir
 touch name file =create new file
-----------------------------------------| delete
+----------------------------------------| remove
+rm -rf <directoryname> =remove directory
+rm -rf <namefile or directory> =to remove file
 ----------------------------------------| comment line
 # =single comment line
 << multiplecomment
@@ -31,8 +39,19 @@ touch name file =create new file
 2
 3
 multiplecomment
-----------------------------------------|
-----------------------------------------|
+----------------------------------------| Permission
+chmod 400 <filename> =full permission
+chmod +x <filename>
+chmod -x <filename>
+chmod u+x <filename>
+
+----------------------------------------| Variables type
+
+----------------------------------------| System variables
+env =sys variables lis
+set =variables list
+set|grep USER =user variable
+
 ----------------------------------------|
 
 rmdir
@@ -43,10 +62,9 @@ ps  =processes from user
 ps -ef =all the processes on machine
 top =CPU usage 20 processes on machine
 open . =root
-ll  -a
 vim =editor
 mv <filename> =move files to - or rename
-rm -rf <namefile or directory> =to remove file
+
 sudo apt-get update =apdate
 shutdown +0 =off machine
 sudo apt-get install (something toinstall)
@@ -71,7 +89,8 @@ sudo gedit  + path to file =to edit the file
 
 rm -rfv <file name>   =remove full folder
 
-chmod 400 =file permission
+
+
 
 
 

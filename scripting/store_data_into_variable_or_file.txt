@@ -1,0 +1,7 @@
+#!/bin/bash
+
+my_ls_value=$(ls) # To store data to variable
+my_ls_value=`ls`
+ls > file_ls_data.txt # Store data to file TXT
+today_date=$(date +"%d-%m-%Y")
+log_file_name=${today_date}.log
