@@ -24,6 +24,15 @@ echo $USER
 echo $SHELL
 echo $OSTYPE
 echo $? =status previous command status code
+echo -e =for special characters in string
+echo -n =appended next echo command to single line
+\d      =skip one prev character in string
+\b
+\t      =vertical tab
+\a
+---------------------------------------| Echo color
+echo -e "\033[92mThis is a green color printing"
+echo -e "\033[0mThis is a default color"
 ----------------------------------------| export
 export PATH=${PATH}:<path>
 ----------------------------------------| create
@@ -32,6 +41,7 @@ touch name file =create new file
 ----------------------------------------| remove
 rm -rf <directoryname> =remove directory
 rm -rf <namefile or directory> =to remove file
+rm -rfv <file name>   =remove full folder
 ----------------------------------------| comment line
 # =single comment line
 << multiplecomment
@@ -51,9 +61,7 @@ chmod u+x <filename>
 env =sys variables lis
 set =variables list
 set|grep USER =user variable
-
 ----------------------------------------|
-
 rmdir
 history =list all commands used
 man rmdir =
@@ -83,11 +91,8 @@ sudo systemctl status jenkins  =check the status of Jenkins
 sudo systemctl start jenkins  =start Jenkins
 sudo systemctl restart jenkins  =restart Jenkins
 sudo systemctl stop jenkins  =stop Jenkins
-
 sudo gedit  + path to file =to edit the file
 
-
-rm -rfv <file name>   =remove full folder
 
 
 
