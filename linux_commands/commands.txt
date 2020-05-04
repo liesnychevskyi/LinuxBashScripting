@@ -68,7 +68,12 @@ sudo apt-get update
 read -p "Enter server name: " web_server
 
 
+----------------------------------------| CMD value of arguments
+cmd_value=$#
 ----------------------------------------|
+----------------------------------------|
+----------------------------------------|
+
 rmdir
 history =list all commands used
 man rmdir =

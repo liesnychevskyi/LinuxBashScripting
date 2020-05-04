@@ -1,0 +1,12 @@
+#!/bin/bash
+#---------------------------------------------||
+# This is used to add two numbers
+cmd_line_args=$# // arguments to CMD
+
+if [ $cmd_line_args -eq 2 ]  // If CMD arguments = 2
+ then
+   x=$1
+   y=$2
+ result=$((x+y))
+ echo "The result of addition is:  $result"
+fi
