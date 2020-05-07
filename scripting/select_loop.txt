@@ -1,0 +1,42 @@
+#!/bin/bash
+#------------------------------------------------------------||
+select opt in Addition Subtraction Multiplication Division Quit
+do
+    case $opt in
+    Addition)
+    echo "You selected <<ADDITION>>"
+        read -p "Enter num1: " num1
+        read -p "Enter num2: " num2
+        echo "The addition of $num1 and num2 is: $((num1+num2))"
+        ;;
+
+    Subtraction)
+    echo "You selected <<SUBTRACTION>>"
+        read -p "Enter num1: " num1
+        read -p "Enter num2: " num2
+        echo "The subtraction of $num1 and num2 is: $((num1-num2))"
+        ;;
+
+    Multiplication)
+    echo "You selected <<MULTIPLICATION>>"
+        read -p "Enter num1: " num1
+        read -p "Enter num2: " num2
+        echo "The multiplication of $num1 and num2 is: $((num1*num2))"
+        ;;
+
+     Division)
+     echo "You selected <<DIVISION>>"
+        read -p "Enter num1: " num1
+        read -p "Enter num2: " num2
+        echo "The division of $num1 and num2 is: $((num1/num2))"
+        ;;
+
+     Quit)
+     echo "Thank you for using  my CALCULATOR"
+     exit 0
+
+        *)
+        echo "You selected <<INVALID OPTION: ERROR>>"
+    esac
+
+done

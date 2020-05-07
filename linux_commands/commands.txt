@@ -26,6 +26,8 @@ echo $OSTYPE
 echo $? =status previous command status code
 echo -e =for special characters in string
 echo -n =appended next echo command to single line
+echo {1..10}
+echo {1..2..10}
 \d      =skip one prev character in string
 \b
 \t      =vertical tab
@@ -70,8 +72,13 @@ read -p "Enter server name: " web_server
 
 ----------------------------------------| CMD value of arguments
 cmd_value=$#
-----------------------------------------|
-----------------------------------------|
+----------------------------------------| Sequence
+seq 1 30
+seq 1 2 30 = +2 to result
+seq 10 -1 1 =1- from 10
+
+----------------------------------------| Select loop
+
 ----------------------------------------|
 
 rmdir
