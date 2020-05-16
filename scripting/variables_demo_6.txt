@@ -1,0 +1,8 @@
+#!/bin/bash
+
+x=3
+y=5
+z=7
+
+echo "$x"
+echo -e "Te value of x is: $x \nThe value of y is: $y \nThe value of z is: $z"

@@ -1,0 +1,4 @@
+#!/bin/bash
+path_tomcat="/tmp/apache-tomcat-9.8.7.tar.gz"
+echo "${path_tomcat%tar.gz}" #deleting from the END tar.gz
+echo "${path_tomcat#/tmp}" #deleting from the BEGINNING /tmp

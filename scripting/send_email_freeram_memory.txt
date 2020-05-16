@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TO="some_email@gmeil.com"
+ram_free=$(free -mt | grep Total: | awk '{print $4}')
+
+if [ $ram_free -le 700 ]
+then
+    echo "Sending email because your RAM memory is less then 700 GB"
+    echo "Subject:Warning, RAM free Size is LOW"|sendmail $TO
+fi
