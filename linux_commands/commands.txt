@@ -8,8 +8,6 @@ ls -l
 ls -lrt  = column files and folders
 ----------------------------------------| free RAM size
 free -m
-free -mt =total free ram
-free -mt | grep Total:
 ----------------------------------------| permissions
 chmod 755 <script name>
 ./<script name>  =run permitted script
@@ -17,18 +15,8 @@ chmod +x =execution permission
 ----------------------------------------| which
 which pwd
 which cp
-----------------------------------------|
-----------------------------------------| Server name
-uname -n
-----------------------------------------| Up time
-uptime =uptime of linux machine
-----------------------------------------| Prompt Environment variable
-PS1="[\t ==> \u@\h \w]" =to change command line info
 ----------------------------------------| echo
 echo $PATH
-echo -n =continue the next echo command
-echo -n "some_text"; echo "some_text"
-echo -ne "some_text"; echo "some_text"
 echo "$(ls)"
 echo '$(ls)'
 echo $(ls)
@@ -41,7 +29,6 @@ echo -n =appended next echo command to single line
 echo {1..10}
 echo {1..2..10}
 \d      =skip one prev character in string
-\n
 \b
 \t      =vertical tab
 \a
@@ -51,6 +38,9 @@ echo -e "\033[0mThis is a default color"
 ----------------------------------------| export
 export PATH=${PATH}:<path>
 ----------------------------------------| create
+----------------------------------------| move and rename file
+mv old_filename new_filename
+----------------------------------------|
 mkdir =make new dir
 touch name file =create new file
 ----------------------------------------| remove
@@ -60,9 +50,9 @@ rm -rfv <file name>   =remove full folder
 ----------------------------------------| comment line
 # =single comment line
 << multiplecomment
-1 text
-2 text
-3 text
+1
+2
+3
 multiplecomment
 ----------------------------------------| Permission
 chmod 400 <filename> =full permission
@@ -81,12 +71,10 @@ command | awk option 'patern/condition {action}'
 awk '/root/ { print $0 } ' /etc/passwd
 free -m | awk 'awk 'NR==2{print $4, "MB(MegaBytes)"}'
 awk '{print}' filename.txt
-
 ======================================================||
 awk { print "========== working on /etc/filename ==========" } /root/
 { print $0 } END { print "========== complete work on /etc/filename ==========" }
 /etc/filename
-======================================================||
 ----------------------------------------| Sudo get update
 sudo apt-get update
 ----------------------------------------| Read mode
@@ -102,12 +90,6 @@ seq 10 -1 1 =1- from 10
 
 ----------------------------------------| Select loop
 
-----------------------------------------| Printf command
-printf "some for printing"
-----------------------------------------| String manipulation
-path_tomcat="/tmp/apache-tomcat-9.8.7.tar.gz"
-echo "${path_tomcat%tar.gz}" #deleting from the END tar.gz
-echo "${path_tomcat#/tmp}" #deleting from the BEGINNING /tmp
 ----------------------------------------|
 
 rmdir
