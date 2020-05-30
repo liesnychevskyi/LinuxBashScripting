@@ -8,15 +8,56 @@ ls -l
 ls -lrt  = column files and folders
 ----------------------------------------| free RAM size
 free -m
+free -mt =total free ram
+free -mt | grep Total:
 ----------------------------------------| permissions
 chmod 755 <script name>
 ./<script name>  =run permitted script
 chmod +x =execution permission
+----------------------------------------| wget
+wget www.some web page = takes all page
+
+----------------------------------------| CURL
+curl --version
+curl www.some_page = takes all the web page to terminal
+
 ----------------------------------------| which
 which pwd
 which cp
+----------------------------------------| REGEX
+sed -n '/some_word/p' filename.txt
+sed -n '/p[ou]t/p' file.txt
+sed -n '/\s/p' filename.txt = looking sentences with space
+sed -n '/\\s/p' filename.txt = looking for sentences with \s symbol
+sed -n '/\t/p' filename.txt
+sed -n '/p.t/p' filename.txt = between P and T could be any character
+sed -n '/\sp.t/p' filename.txt = looking for starting with SPACE and P.T
+sed -n '/This*/p' filename.txt = looking for This word * mean it could be Thiss or Thissssss
+sed -n '/p[a-o]t/p' filename.txt = from A to O between P and T
+sed -n '/This\{3\}/p' filename.txt = Looking just Thisss minimum 3 - sss
+sed -n '/This{3\}\b/p' filename.txt = Looking just Thisss with 3 sss only
+sed -n '/\(pot\)\{2\}/p' filename.txt = \(pot\)\{2\} - pattern looking some word where repiting POT 2 times
+
+
+\+ = minimum 1 time or more 1 time
+\s = space
+\ = with slash symbol
+\t = with TAB symbol
+\. = eny character
+\* =
+\? =
+
+----------------------------------------| Server name
+uname -n
+----------------------------------------| Up time
+uptime =uptime of linux machine
+----------------------------------------| Prompt Environment variable
+PS1="[\t ==> \u@\h \w]" =to change command line info
 ----------------------------------------| echo
 echo $PATH
+echo -n =continue the next echo command
+echo -n "some_text"; echo "some_text"
+echo -ne "some_text"; echo "some_text"
 echo "$(ls)"
 echo '$(ls)'
 echo $(ls)
@@ -29,6 +70,7 @@ echo -n =appended next echo command to single line
 echo {1..10}
 echo {1..2..10}
 \d      =skip one prev character in string
+\n
 \b
 \t      =vertical tab
 \a
@@ -38,11 +80,11 @@ echo -e "\033[0mThis is a default color"
 ----------------------------------------| export
 export PATH=${PATH}:<path>
 ----------------------------------------| create
-----------------------------------------| move and rename file
-mv old_filename new_filename
-----------------------------------------|
 mkdir =make new dir
 touch name file =create new file
+----------------------------------------| remove program
+sudo apt remove program_name -y = remove program
+
 ----------------------------------------| remove
 rm -rf <directoryname> =remove directory
 rm -rf <namefile or directory> =to remove file
@@ -50,9 +92,9 @@ rm -rfv <file name>   =remove full folder
 ----------------------------------------| comment line
 # =single comment line
 << multiplecomment
-1
-2
-3
+1 text
+2 text
+3 text
 multiplecomment
 ----------------------------------------| Permission
 chmod 400 <filename> =full permission
@@ -71,10 +113,12 @@ command | awk option 'patern/condition {action}'
 awk '/root/ { print $0 } ' /etc/passwd
 free -m | awk 'awk 'NR==2{print $4, "MB(MegaBytes)"}'
 awk '{print}' filename.txt
+
 ======================================================||
 awk { print "========== working on /etc/filename ==========" } /root/
 { print $0 } END { print "========== complete work on /etc/filename ==========" }
 /etc/filename
+======================================================||
 ----------------------------------------| Sudo get update
 sudo apt-get update
 ----------------------------------------| Read mode
@@ -90,6 +134,12 @@ seq 10 -1 1 =1- from 10
 
 ----------------------------------------| Select loop
 
+----------------------------------------| Printf command
+printf "some for printing"
+----------------------------------------| String manipulation
+path_tomcat="/tmp/apache-tomcat-9.8.7.tar.gz"
+echo "${path_tomcat%tar.gz}" #deleting from the END tar.gz
+echo "${path_tomcat#/tmp}" #deleting from the BEGINNING /tmp
 ----------------------------------------|
 
 rmdir
